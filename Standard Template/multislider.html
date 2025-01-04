@@ -1,0 +1,593 @@
+<?php /* Template Name: Multi Slider */ 
+get_header();?>
+
+<section class="pt-0 pb-0">
+    <div class="banner-area banner1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="banner-heading">
+                    <h2 class="banner-title"><?php the_title(); ?></h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="demo-icon icon-right-open-2">&#xe805;</i> <?php the_title(); ?></li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- slider 5 item -->
+<section>
+    <div class="container text-center">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="multislider02" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/CB997E/333333?text=1"
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/DDBEA9/333333?text=2"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/FFE8D6/333333?text=3"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/B7B7A4/333333?text=4"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/A5A58D/333333?text=5"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/6B705C/eeeeee?text=6"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#multislider02" role="button"
+                    data-bs-slide="prev">
+					<i class="demo-icon icon-left client_btn">&#xe811;</i>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#multislider02" role="button"
+                    data-bs-slide="next">
+					<i class="demo-icon icon-right client_btn">&#xe805;</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @media (max-width: 767px) {
+            #multislider02 .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            #multislider02 .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        #multislider02 .carousel-inner .carousel-item.active,
+        #multislider02 .carousel-inner .carousel-item-next,
+        #multislider02 .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            #multislider02 .carousel-inner .carousel-item-end.active,
+            #multislider02 .carousel-inner .carousel-item-next {
+                transform: translateX(20%);
+            }
+
+            #multislider02 .carousel-inner .carousel-item-start.active,
+            #multislider02 .carousel-inner .carousel-item-prev {
+                transform: translateX(-20%);
+            }
+        }
+
+        #multislider02 .carousel-inner .carousel-item-end,
+        #multislider02 .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+    </style>
+
+    <script>
+        let items2 = document.querySelectorAll('#multislider02 .carousel-item')
+
+        items2.forEach((el) => {
+            const minPerSlide = 5
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items2[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+
+</section>
+<!-- slider 5 item -->
+
+<!-- slider 4 item -->
+<section>
+    <div class="container text-center">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="multislider03" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/CB997E/333333?text=1"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/DDBEA9/333333?text=2"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/FFE8D6/333333?text=3"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/B7B7A4/333333?text=4"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/A5A58D/333333?text=5"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/6B705C/eeeeee?text=6"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#multislider03" role="button"
+                    data-bs-slide="prev">
+					<i class="demo-icon icon-left client_btn">&#xe811;</i>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#multislider03" role="button"
+                    data-bs-slide="next">
+					<i class="demo-icon icon-right client_btn">&#xe805;</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @media (max-width: 767px) {
+            #multislider03 .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            #multislider03 .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        #multislider03 .carousel-inner .carousel-item.active,
+        #multislider03 .carousel-inner .carousel-item-next,
+        #multislider03 .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            #multislider03 .carousel-inner .carousel-item-end.active,
+            #multislider03 .carousel-inner .carousel-item-next {
+                transform: translateX(25%);
+            }
+
+            #multislider03 .carousel-inner .carousel-item-start.active,
+            #multislider03 .carousel-inner .carousel-item-prev {
+                transform: translateX(-25%);
+            }
+        }
+
+        #multislider03 .carousel-inner .carousel-item-end,
+        #multislider03 .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+    </style>
+
+    <script>
+        let items3 = document.querySelectorAll('#multislider03 .carousel-item')
+
+        items3.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items3[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+</section>
+<!-- slider 4 item -->
+
+<!-- slider 3 item -->
+<section>
+    <div class="container text-center">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="multislider04" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/CB997E/333333?text=1"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/DDBEA9/333333?text=2"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/FFE8D6/333333?text=3"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/B7B7A4/333333?text=4"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/A5A58D/333333?text=5"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/6B705C/eeeeee?text=6"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#multislider04" role="button"
+                    data-bs-slide="prev">
+					<i class="demo-icon icon-left client_btn">&#xe811;</i>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#multislider04" role="button"
+                    data-bs-slide="next">
+					<i class="demo-icon icon-right client_btn">&#xe805;</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @media (max-width: 767px) {
+            #multislider04 .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            #multislider04 .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        #multislider04 .carousel-inner .carousel-item.active,
+        #multislider04 .carousel-inner .carousel-item-next,
+        #multislider04 .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            #multislider04 .carousel-inner .carousel-item-end.active,
+            #multislider04 .carousel-inner .carousel-item-next {
+                transform: translateX(33%);
+            }
+
+            #multislider04 .carousel-inner .carousel-item-start.active,
+            #multislider04 .carousel-inner .carousel-item-prev {
+                transform: translateX(-33%);
+            }
+        }
+
+        #multislider04 .carousel-inner .carousel-item-end,
+        #multislider04 .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+    </style>
+
+    <script>
+        let items4 = document.querySelectorAll('#multislider04 .carousel-item')
+
+        items4.forEach((el) => {
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items4[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+</section>
+<!-- slider 3 item -->
+
+<!-- slider 2 item -->
+<section>
+    <div class="container text-center">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="multislider05" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/CB997E/333333?text=1"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/DDBEA9/333333?text=2"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/FFE8D6/333333?text=3"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/B7B7A4/333333?text=4"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/A5A58D/333333?text=5"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/700x500.webp/6B705C/eeeeee?text=6"
+                                        class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#multislider05" role="button"
+                    data-bs-slide="prev">
+					<i class="demo-icon icon-left client_btn">&#xe811;</i>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#multislider05" role="button"
+                    data-bs-slide="next">
+					<i class="demo-icon icon-right client_btn">&#xe805;</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @media (max-width: 767px) {
+            #multislider05 .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            #multislider05 .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        #multislider05 .carousel-inner .carousel-item.active,
+        #multislider05 .carousel-inner .carousel-item-next,
+        #multislider05 .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            #multislider05 .carousel-inner .carousel-item-end.active,
+            #multislider05 .carousel-inner .carousel-item-next {
+                transform: translateX(50%);
+            }
+
+            #multislider05 .carousel-inner .carousel-item-start.active,
+            #multislider05 .carousel-inner .carousel-item-prev {
+                transform: translateX(-50%);
+            }
+        }
+
+        #multislider05 .carousel-inner .carousel-item-end,
+        #multislider05 .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+    </style>
+
+    <script>
+        let items5 = document.querySelectorAll('#multislider05 .carousel-item')
+
+        items5.forEach((el) => {
+            const minPerSlide = 2
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items5[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+</section>
+<!-- slider 2 item -->
+
+<?php get_footer();?>

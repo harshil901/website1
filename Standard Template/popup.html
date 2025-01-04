@@ -1,0 +1,137 @@
+
+<?php /* Template Name: Popup */ 
+get_header();?>
+
+<section class="pt-0 pb-0">
+    <div class="banner-area banner1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="banner-heading">
+                    <h2 class="banner-title"><?php the_title(); ?></h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="demo-icon icon-right-open-2">&#xe805;</i> <?php the_title(); ?></li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            
+            <!-- Trigger buttons for modals -->
+             <div class="col-md-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                Launch Modal 1
+                </button>
+            </div>
+
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Launch Modal 2
+                </button>
+            </div>
+
+            <!-- Modal 1 -->
+            <div class="modal fade my-modal-class" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal1Label">Modal 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Content for Modal 1.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Modal 2 -->
+            <div class="modal fade my-modal-class" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal2Label">Modal 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Content for Modal 2.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <script>
+                // Get the modal elements by their IDs
+            var modal1 = new bootstrap.Modal(document.getElementById('exampleModal1'));
+            var modal2 = new bootstrap.Modal(document.getElementById('exampleModal2'));
+
+            // Show Modal 1
+            document.getElementById('showModal1').addEventListener('click', function() {
+            modal1.show();
+            });
+
+            // Show Modal 2
+            document.getElementById('showModal2').addEventListener('click', function() {
+            modal2.show();
+            });
+
+            </script>
+        </div>
+    </div>
+</section>
+
+<!-- On page load -->
+ <section class="pt-0 pb-0">
+    <div class="container">
+        <div class="row">
+
+            <!-- Modal -->
+            <div class="modal fade" id="onpageload" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">On page Load</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This modal appears on page load.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+            <!-- JavaScript to trigger the modal on page load -->
+            <script>
+            window.addEventListener('load', function () {
+                const modalElement = document.getElementById('onpageload'); // Get the modal by its id
+                const modal = new bootstrap.Modal(modalElement); // Create a Bootstrap modal instance
+                modal.show(); // Show the modal on page load
+            });
+            </script>
+
+
+
+        </div>
+    </div>
+ </section>
+
+
+ <?php get_footer();?>

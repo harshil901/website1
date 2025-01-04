@@ -1,0 +1,776 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+		rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet"
+		media="all">
+	<link href="assets/css/animation.css" rel="stylesheet" media="all">
+	<link href="style.css" rel="stylesheet" media="all">
+	<title>DLF Privana</title>
+</head>
+
+<body>
+
+<div class="magic-cursor"></div>
+  <div class="magic-cursor-border"></div>
+<!-- masthead -->
+	<section class="p-0">
+		<header id="masthead">
+			<h2 class="not-disply">hello</h2>
+			<div class="auto-container">
+				<nav class="navbar navbar-expand-lg">
+					<div class="navbar-brand navbar-header">
+						<div class="logo">
+							<a href="index.html">
+								<img src="assets/images/logo.png" width="118" height="63" alt="Logo" title="Logo"
+									loading="lazy">
+							</a>
+						</div>
+					</div>
+
+					<div class="textcall">
+						<h3 class="callus m-0">
+						<a href="tel:+919871741373">24 hours hotline</a></h3>
+						<p>09873356100</p>
+					</div>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="demo-icon icon-menu">&#xe809;</i>
+					</button>
+					<div class="collapse navbar-collapse menutop" id="main_nav">
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									 <a class="nav-link" href="#Highlights">Highlights </a> 
+								  </li>
+								<li class="nav-item"><a class="nav-link" href="#Overview"> Overview</a></li>
+								<li class="nav-item"><a class="nav-link" href="#Amenities">Amenities</a></li>
+								<li class="nav-item"><a class="nav-link" href="#Price">Price</a></li>
+								<li class="nav-item"><a class="nav-link" href="#Floor"> Floor Plan</a></li>
+								<li class="nav-item"><a class="nav-link" href="#Gallery"> Gallery</a></li>
+								<li class="nav-item"><a class="nav-link" href="#Location"> Location</a></li>
+								<li class="nav-item"><a class="nav-link" href="#Developer"> Developer</a></li>
+							</ul>
+					</div>
+
+				</nav>
+			</div>
+		</header>
+	</section>
+
+<script>
+   // Select the cursor elements
+const cursor = document.querySelector('.magic-cursor');
+const cursorBorder = document.querySelector('.magic-cursor-border');
+
+// Initialize cursor positions and smoothness
+let cursorX = 0, cursorY = 0;
+let targetX = 0, targetY = 0;
+const smoothness = 0.1;
+
+// Update the cursor position smoothly
+function animateCursor() {
+  cursorX += (targetX - cursorX) * smoothness;
+  cursorY += (targetY - cursorY) * smoothness;
+
+  cursor.style.left = `${cursorX}px`;
+  cursor.style.top = `${cursorY}px`;
+  cursorBorder.style.left = `${cursorX}px`;
+  cursorBorder.style.top = `${cursorY}px`;
+
+  requestAnimationFrame(animateCursor);
+}
+
+// Start animation
+animateCursor();
+
+// Track the target position on mousemove
+document.addEventListener('mousemove', (e) => {
+  targetX = e.clientX;
+  targetY = e.clientY;
+});
+
+// Add hover effects for interactive elements
+document.querySelectorAll('button, a').forEach((element) => {
+  element.addEventListener('mouseenter', () => {
+    cursor.classList.add('hover-effect');
+    cursorBorder.classList.add('hover-effect');
+  });
+  element.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover-effect');
+    cursorBorder.classList.remove('hover-effect');
+  });
+});
+  </script>
+
+
+<!-- about us -->
+ <section>
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="col-lg-8 col-md-8 fade-in-top mobile">
+                    <div class="images">
+                        <img src="assets/images/about/about-img.jpeg">
+                    </div>
+                </div>
+                <div class="content">
+                    <h5 class="title-f">New Launch</h5>
+                    <h3 class="title-main">DLF Privana North</h3>
+                    <h4 class="title-second">By DLF Group</h4>
+                </div>
+
+                <div class="gur mb-4 mt-4"><span><i class="demo-icon icon-location loca-ico">&#xe800;</i></span>At Sector 76, Gurgaon</div>
+                <ul class="icon-list mb-4 mt-4">
+                    <li class="icon-list-item"><i class="demo-icon icon-diamond-1">&#xe801;</i> Lush Greenery</li>
+                    <li class="icon-list-item"><i class="demo-icon icon-diamond-1">&#xe801;</i> Rooftop Infinity Club</li>
+                    <li class="icon-list-item"><i class="demo-icon icon-diamond-1">&#xe801;</i> Land Parcel is 25 - 27 Acres</li>
+                </ul>
+
+                <h3 class="title-s">4 BHK + Study + SQ</h3>
+                <p class="text-about">Ultra Luxury High Apartments</p>
+
+                <div class="icon-box mt-3">
+                    <span class="icon">
+                      <i class="demo-icon icon-rupee ico1">&#xf156;</i>
+                        </span>
+                    <div class="dis">
+                        <h3 class="title-s ">9.5 Cr*</h3>
+                        <p class="words2">Onwards</p>
+                    </div>
+                </div>
+                <div class="hero-footer">
+                    <a href="#"  class="btn-default wow fadeInUp" data-wow-delay="0.75s">Enquire Now</a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 fade-in-top desktop">
+                <div class="images ">
+                    <img src="assets/images/about/about-img.jpeg">
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <div class="nature-bg">
+    <img src="assets/images/resource/nature.jpg" alt="">
+</div>
+
+<section class="luxery-sec" id="Highlights">
+    <div class="container">
+        <div class="row align-items-center border-style">
+            <div class="col-lg-6 col-md-6">
+                <div class="luxery-contant">
+                    <h2 class="mb-5">FEEL THE NEW WAVE OF LUXURY</h2>
+                    <div class="luxery-ul">
+                        <ul>
+                            <li><span class="marker">1.</span>Total Land – 25-27 Acres</li>
+                            <li><span class="marker">2.</span>Aravali Hill Facing Towers</li>
+                            <li><span class="marker">3.</span>Lush greenery with parks and tree-lined avenues.</li>
+                            <li><span class="marker">4.</span>Living /dining /lobby /passage- Imported Italian marble.</li>
+                            <li><span class="marker">5.</span>Experience world class clubbing experience with Rooftop Infinity.</li>
+                            <li><span class="marker">6.</span>Air-Conditioned Apartments, with energy efficient VRV/VRF system.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="luxery-img">
+                    <img src="assets/images/resource/luxery.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="nature-bg">
+    <img src="assets/images/resource/connectivity.jpg" alt="">
+</div>
+
+
+<section id="Overview">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="overview">
+                    <h2 class="over-content mb-3">Overview</h2>
+                    <h2 class="heading-title">Presenting "DLF Privana By DLF Group</h2>
+
+                    <p class="mar-b">The seven towers of Privana South will rise majestically above the city of Gurugram and the lush, verdant paradise of the Aravalli mountain range.</p>
+
+                    <p class="mar-b">Each tower is crowned by two superb penthouses and every floor below it has 4 spacious luxury apartments for a total of just 1,113 apartments at the region’s most desirable address. In addition to the spectacular views, join a like-minded community built for those who enjoy an urban lifestyle.</p>
+                </div>
+                <div class="hero-footer">
+                    <a href="#"  class="btn-default wow fadeInUp" data-wow-delay="0.75s">Download Brochure</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="Amenities" id="Amenities">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="Amenities-heading">Enhance Your Experience With Amenities</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- game slider -->
+<section class="game-slider">
+    <div class="container text-center">
+        <div class="row mx-auto my-auto justify-content-center border-style22">
+            <div id="multislider04" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner " role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game1.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game2.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game3.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game4.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game5.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game6.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game7.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game8.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game9.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/game/game10.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <figcaption>Restaurant</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#multislider04" role="button"
+                    data-bs-slide="prev">
+					<i class="demo-icon icon-left-open">&#xe802;</i>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#multislider04" role="button"
+                    data-bs-slide="next">
+					<i class="demo-icon icon-right-open">&#xe804;</i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let items4 = document.querySelectorAll('#multislider04 .carousel-item')
+
+        items4.forEach((el) => {
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items4[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+</section>
+<!-- game slider end -->
+
+<div class="nature-bg">
+    <img src="assets/images/resource/presentation.jpg" alt="">
+</div>
+
+<!-- Price list start -->
+<section id="Price">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="over-content mb-3">Price List</h2>
+            <h2 class="price-title ">Attractive Plan &amp; Pricing</h2>
+        </div>
+        <div class="row d-flex justify-content-center align-item-center">
+            <div class="col-12 ">
+                <div class="property-details">
+                    <h2 class="property-details-h">4 BHK + Study + SQ</h2>
+                    <div class="property-info">
+                        <div>
+                            <h2 class="over-content mt-4">Size</h2>
+                            <h3 class="over-content2 mb-3">3700 Sq. Ft.</h3>
+                        </div>
+                        <div>
+                            <h2 class="over-content mt-4">Price</h2>
+                            <h3 class="over-content2 mb-3"><i class="demo-icon icon-rupee">&#xf156;</i>  9.5 Cr* Onwards</h3>
+                        </div>
+                    </div>
+                    <div class="hero-footer">
+                        <a href="#"  class="btn-default wow fadeInUp" data-wow-delay="0.75s">Price Breakup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Price list end -->
+
+ <!--slider map start  -->
+<section class="game-slide" id="Floor">
+    <div class="container text-center">
+        <div class="text-center">
+            <h2 class="over-content mb-3">Floor Plan</h2>
+            <h2 class="price-title mb-5">Premium Layouts & Plan</h2>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center ">
+            <div id="multislider10" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/map/map-1.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/map/map-2.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/map/map-1.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/map/map-2.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat similar structure for other items -->
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#multislider10" role="button"
+                    data-bs-slide="prev">
+                    <i class="demo-icon icon-left-open">&#xe802;</i>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#multislider10" role="button"
+                    data-bs-slide="next">
+                    <i class="demo-icon icon-right-open">&#xe804;</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items4 = document.querySelectorAll('#multislider10 .carousel-item');
+        const minPerSlide = 3;
+
+        items4.forEach((el) => {
+            let next = el.nextElementSibling;
+
+            for (let i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    next = items4[0]; // Loop to start
+                }
+
+                const cloneChild = next.cloneNode(true);
+                el.appendChild(cloneChild.children[0]);
+                next = next.nextElementSibling;
+            }
+        });
+    });
+</script>
+
+ <!--slider map end  -->
+
+<!-- project image start -->
+ <section class="project" id="Gallery">
+    <div class="auto-container text-center">
+        <div class="text-center">
+            <h2 class="over-content mb-3">Gallery</h2>
+            <h2 class="price-title2 mb-5">Project Images</h2>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center border-style3">
+            <div id="multislider11" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-1.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-2.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-3.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-4.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-5.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-6.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro7.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-8.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-9.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card m-0">
+                                <div class="card-img">
+                                    <img src="assets/images/project/pro-10.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat similar structure for other items -->
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#multislider11" role="button"
+                    data-bs-slide="prev">
+                    <i class="demo-icon icon-left-open">&#xe802;</i>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#multislider11" role="button"
+                    data-bs-slide="next">
+                    <i class="demo-icon icon-right-open">&#xe804;</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items4 = document.querySelectorAll('#multislider11 .carousel-item');
+        const minPerSlide = 3;
+
+        items4.forEach((el) => {
+            let next = el.nextElementSibling;
+
+            for (let i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    next = items4[0]; // Loop to start
+                }
+
+                const cloneChild = next.cloneNode(true);
+                el.appendChild(cloneChild.children[0]);
+                next = next.nextElementSibling;
+            }
+        });
+    });
+</script>
+<!-- Location -->
+<section class="location" id="Location">
+    <div class="container width">
+        <div class="row">
+            <div class="col-lg-4 p-0 abc">
+                <div class="map-con">
+                    <div class="luxery-contant-map">
+                        <h2 class="mm-5">Location Advantages</h2>
+                        <div class="luxery-ul">
+                            <ul>
+                                <li class="mb-2"><span class="marker">1.</span>40 Mins. to Airport</li>
+                                <li class="mb-2"><span class="marker">2.</span>Near Dwarka Expressway, Central Periphery and Southern Periphery Road.</li>
+                                <li class="mb-2"><span class="marker">3.</span>Just Near the proposed DLF Cyber-hub 2 and close to Delhi – Mumbai & Delhi – Jaipur Highways.</li>
+                            </ul>
+                        </div>
+                        <div class="hero-footer mt-3">
+                        <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.75s">Request To Brochure</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 p-0">
+                <div class="map-img1">
+                    <img src="assets/images/resource/map-img.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container" id="Developer">
+        <div class="row">
+            <div class="col-12">
+                <div class="overview">
+                    <h2 class="over-content mb-3">Developer</h2>
+                    <h2 class="heading-title">DLF Group</h2>
+
+                    <p class="mar-b">Founded in 1946 by Chaudhary Raghvendra Singh, DLF started with the creation of 22 urban colonies in Delhi. In 1985, the company expanded into the then-unknown region of Gurugram, creating exceptional living and working spaces for the new Indian global professionals. Today, DLF is the largest publicly listed real estate company in India, with residential, commercial, and retail properties in 15 states and 24 cities.</p>
+
+                    <p class="mar-b">Our diverse verticals reflect our dedication to developing ecosystems for India’s changing needs. But our foundation has always been our employees, our customers, our stakeholders, and our shareholders. We invest in spearheading innovation through empowerment and optimism, in order to build the foundation of India’s future on the legacy of our past.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- small content start -->
+<section class="p-0 acb">
+<div class="col-12 small-area">
+    <div class="auto-container ">
+        <p class="small-font mb-4">Disclaimer : The content provided on this website is for information purposes only and does not constitute an offer to avail any service. The prices mentioned are subject to change without prior notice, and the availability of properties mentioned is not guaranteed. The images displayed on the website are for representation purposes only and may not reflect the actual properties accurately. Please note that this is the official website of an authorized marketing partner. We may share data with Real Estate Regulatory Authority (RERA) registered brokers/companies for further processing as required. We may also send updates and information to the mobile number or email ID registered with us. All rights reserved. The content, design, and information on this website are protected by copyright and other intellectual property rights. `Privacy POlicy . Project RERA: GGM/772/504/2023/116 DATED 18.12.2023 . Agent Rera</p>
+    </div>
+</section>
+
+<section class="p-0 over m-0">
+    <div class="row text-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p-0 aff">
+            <div class="icon-box-container">
+                <div class="icon-box-wrapper">
+                    <div class="icon-box-icon">
+                        <a href="tel:+919873356100" class="icon-link">
+                        <i class="demo-icon icon-call ico-w">&#xe807;</i>
+                        </a>
+                    </div>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title m-0">
+                            <a href="tel:+919873356100">
+                                Tap To Call
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p-0 aff">
+        <div class="icon-box-container">
+                <div class="icon-box-wrapper">
+                    <div class="icon-box-icon">
+                        <a href="tel:+919873356100" class="icon-link">
+                        <i class="demo-icon icon-paper-plane ico-w">&#xe805;</i> 
+                        </a>
+                    </div>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title m-0">
+                            <a href="tel:+919873356100">
+                                Tap To Call
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p-0 aff">
+        <div class="icon-box-container">
+                <div class="icon-box-wrapper">
+                    <div class="icon-box-icon">
+                        <a href="tel:+919873356100" class="icon-link">
+                        <i class="demo-icon icon-whatsapp ico-w">&#xf232;</i>
+                        </a>
+                    </div>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title m-0">
+                            <a href="tel:+919873356100">
+                                Tap To Call
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top" style="display: block;" class="scroll-btn" fdprocessedid="8rntef">
+<i class="demo-icon icon-up-big">&#xe808;</i> 
+</button>
+<script>
+// Show the button when the user scrolls down 20px from the top
+window.onscroll = function () {
+    toggleScrollButton();
+};
+
+function toggleScrollButton() {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+}
+
+// Scroll to the top smoothly when the button is clicked
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+
+<!-- footer -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script defer src="assets/js/custom.min.js"></script>
+<script defer src="assets/js/custom-forms.js"></script>
+
+</body>
+</html>

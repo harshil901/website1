@@ -1,0 +1,168 @@
+<?php /* Template Name: Gallery */ 
+get_header();?>
+
+<section class="pt-0 pb-0">
+    <div class="banner-area banner1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="banner-heading">
+                    <h2 class="banner-title"><?php the_title(); ?></h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="demo-icon icon-right-open-2">&#xe805;</i> <?php the_title(); ?></li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container ">
+    <h2 class="text-center mb-4">Image Gallery</h2>
+    
+    <div class="row">
+        <div class="col-md-4">
+        <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/pic1.webp" class="gallery-img" alt="Gallery Image 1">
+            <div class="hover-overlay">
+            <i class="demo-icon icon-resize-full-alt">&#xf0b2;</i> 
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/pic2.webp" class="gallery-img" alt="Gallery Image 2">
+            <div class="hover-overlay">
+            <i class="demo-icon icon-resize-full-alt">&#xf0b2;</i> 
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/pic3.webp" class="gallery-img" alt="Gallery Image 3">
+            <div class="hover-overlay">
+            <i class="demo-icon icon-resize-full-alt">&#xf0b2;</i> 
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/pic1.webp" class="gallery-img" alt="Gallery Image 1">
+            <div class="hover-overlay">
+            <i class="demo-icon icon-resize-full-alt">&#xf0b2;</i> 
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/pic2.webp" class="gallery-img" alt="Gallery Image 2">
+            <div class="hover-overlay">
+            <i class="demo-icon icon-resize-full-alt">&#xf0b2;</i> 
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/pic3.webp" class="gallery-img" alt="Gallery Image 3">
+            <div class="hover-overlay">
+            <i class="demo-icon icon-resize-full-alt">&#xf0b2;</i> 
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn-close close_gallery" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            <img src="" class="img-fluid" id="modalImage" alt="Gallery Image">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+    const galleryItems = document.querySelectorAll('.hover-overlay');
+    const modalImage = document.getElementById('modalImage');
+
+        galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+        const imgSrc = item.previousElementSibling.src; // Get the image source
+        modalImage.src = imgSrc;
+        new bootstrap.Modal(document.getElementById('galleryModal')).show();
+        });
+    });
+    </script>
+
+</section>
+
+<style>
+  .gallery-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-img-wrapper:hover .gallery-img {
+      transform: scale(1.1); /* Zoom on hover */
+    }
+
+    .hover-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 3rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-img-wrapper:hover .hover-overlay {
+      opacity: 1;
+    }
+
+    .hover-overlay i {
+      cursor: pointer;
+    }
+    button.btn-close.close_gallery {
+    background: var(--secondary);
+    opacity: 1;
+    color: #fff;
+    width: 99px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -17px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+}
+</style>
+
+<?php get_footer();?>

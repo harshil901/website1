@@ -1,0 +1,129 @@
+
+<?php /* Template Name: Faq */ 
+get_header();?>
+
+<section class="pt-0 pb-0">
+    <div class="banner-area banner1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="banner-heading">
+                    <h2 class="banner-title"><?php the_title(); ?></h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="demo-icon icon-right-open-2">&#xe805;</i> <?php the_title(); ?></li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pt-0">
+    <div class="container pt-70">
+        <div class="row">
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <h2 class="faq-question">What is Quintal Stall? <span class="toggle-sign">+</span></h2>
+                    <div class="faq-answer">
+                        <p>Quintal Stall is an online platform to buy fresh vegetables directly from local farmers. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit illum quidem quas! Eum dolorum similique vero blanditiis provident eaque quo laboriosam inventore ab enim repellendus optio, sapiente temporibus harum. Dolore rerum placeat consectetur repellendus quo qui mollitia incidunt hic fugit iure possimus, unde ut delectus facere id esse. Quaerat, dicta!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h2 class="faq-question">How does it work? <span class="toggle-sign">+</span></h2>
+                    <div class="faq-answer">
+                        <p>
+                        You can browse our products, place an order, and get fresh vegetables delivered to your door.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit illum quidem quas! Eum dolorum similique vero blanditiis provident eaque quo laboriosam inventore ab enim repellendus optio, sapiente temporibus harum. Dolore rerum placeat consectetur repellendus quo qui mollitia incidunt hic fugit iure possimus, unde ut delectus facere id esse. Quaerat, dicta!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h2 class="faq-question">What payment methods are accepted? <span class="toggle-sign">+</span></h2>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, and other online payment gateways.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit illum quidem quas! Eum dolorum similique vero blanditiis provident eaque quo laboriosam inventore ab enim repellendus optio, sapiente temporibus harum. Dolore rerum placeat consectetur repellendus quo qui mollitia incidunt hic fugit iure possimus, unde ut delectus facere id esse. Quaerat, dicta!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h2 class="faq-question">What payment methods are accepted? <span class="toggle-sign">+</span></h2>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, and other online payment gateways.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit illum quidem quas! Eum dolorum similique vero blanditiis provident eaque quo laboriosam inventore ab enim repellendus optio, sapiente temporibus harum. Dolore rerum placeat consectetur repellendus quo qui mollitia incidunt hic fugit iure possimus, unde ut delectus facere id esse. Quaerat, dicta!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+.faq-section {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #979191;
+    padding: 15px;
+    border-radius: 6px;
+    padding-bottom: 0;
+}
+.faq-answer p {
+    padding: 12px 6px;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    /* padding-top: 15px; */
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    cursor: pointer;
+    color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    background: #ededed;
+    padding: 15px 15px;
+    margin: 0px;
+}
+
+.toggle-sign {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+</style>
+
+<script>
+// Get all elements with the 'faq-question' class
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+// Loop through each question and add a click event listener
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const toggleSign = question.querySelector('.toggle-sign');
+
+        // Check if the answer is currently expanded
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            toggleSign.textContent = "+";
+        } else {
+            // Expand the answer by setting its maxHeight to its scrollHeight
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            toggleSign.textContent = "-";
+        }
+    });
+});
+
+</script>
+
+<?php get_footer();?>

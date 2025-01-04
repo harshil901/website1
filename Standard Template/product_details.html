@@ -1,0 +1,70 @@
+<?php /* Template Name: Product details
+Template Post Type: product*/ 
+get_header();?>
+
+<section class="pt-0 pb-0">
+    <div class="banner-area banner1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="banner-heading">
+                    <h2 class="banner-title"><?php the_title(); ?></h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="demo-icon icon-right-open-2">&#xe805;</i> <?php the_title(); ?></li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner shadow-lg news-images-slider">
+                            <?php
+                            // Retrieve the uploaded images from the custom field
+                            $product_images = get_post_meta(get_the_ID(), '_product_images', true);
+
+                            if ($product_images): 
+                                $image_ids = explode(',', $product_images);
+                                $first = true; // To check if the current item is the first one for "active" class
+                                foreach ($image_ids as $image_id):
+                                    $image = wp_get_attachment_image_src($image_id, 'full'); // Fetch the image URL
+                                    if ($image): ?>
+                                        <div class="carousel-item <?php echo $first ? 'active' : ''; ?>">
+                                            <img class="d-block w-100" src="<?php echo esc_url($image[0]); ?>" alt="News Image">
+                                        </div>
+                                        <?php $first = false; // Set first to false after the first iteration
+                                    endif;
+                                endforeach;
+                            else: ?>
+                                <div class="carousel-item active">
+                                    <?php the_post_thumbnail('post-thumbnails'); ?> 
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                            <i class="demo-icon icon-left-open pro_left_btn">&#xe811;</i>                   
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                            <i class="demo-icon icon-right-open-2 pro_left_btn">&#xe805;</i>                     
+                        </a>
+                    </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+ <?php get_footer();?>
